@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>AffiliationFR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #c8e6c9, #fff9c4);
+      color: #333;
+    }
+    nav {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 15px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .nav-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 10px;
+        border-radius: 8px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .nav-toggle {
+        display: block;
+        color: #2e7d32;
+      }
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 700px;
+      margin: 50px auto;
+    }
+    .section-anchor { scroll-margin-top: 100px; }
+    h1, h2 { margin-bottom: 20px; color: #2e7d32; }
+    p { font-size: 18px; line-height: 1.6; }
+    .btn-offre {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      background-color: #2e7d32;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-offre:hover {
+      transform: scale(1.1);
+      background-color: #1b5e20;
+    }
+    .contact-link {
+      font-weight: bold;
+      color: #2e7d32;
+      text-decoration: none;
+    }
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+      background-color: rgba(255, 255, 255, 0.6);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">AffiliationFR</div>
+      <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="offres.html">Offres</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <div class="container section-anchor" id="accueil">
+    <h1>Bienvenue sur AffiliationFR</h1>
+    <p>Explorez nos offres et découvrez des opportunités uniques sélectionnées rien que pour vous.</p>
+  </div>
+
+  <div class="container section-anchor" id="apropos">
+    <h2>À propos de nous</h2>
+    <p>
+      AffiliationFR est un site dédié à la promotion de produits et services sélectionnés avec soin dans le cadre de partenariats d’affiliation. 
+      Nous avons pour objectif de recommander des offres fiables, utiles et avantageuses pour les utilisateurs tout en soutenant notre plateforme grâce aux commissions générées.
+    </p>
+  </div>
+
+  <div class="container section-anchor" id="offres">
+    <h2>Nos offres spéciales</h2>
+    <a href="offres.html" class="btn-offre">Voir les offres</a>
+  </div>
+
+  <div class="container section-anchor" id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Email : <a href="mailto:tonemail@example.com" class="contact-link">tonemail@example.com</a></p>
+    <p>
+      WhatsApp : 
+      <a href="https://wa.me/33612345678" target="_blank" class="contact-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24" height="24" style="vertical-align: middle;">
+      </a>
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 AffiliationFR. Tous droits réservés.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var links = document.getElementById("navLinks");
+      links.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
