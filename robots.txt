@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://affiliation-france.github.io/Affiliation-france/sitemap.xml
