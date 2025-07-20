@@ -1,19 +1,18 @@
+# Autorisation globale
 User-agent: *
 Allow: /
 
+# Sitemap XML
 Sitemap: https://affiliation-france.github.io/Affiliation-france/sitemap.xml
 
-# AffiliationFR: directives personnalisées
-# Empêche l'accès aux fichiers cachés et temporaires
+# Directives générales personnalisées
 Disallow: /*.bak$
 Disallow: /*.tmp$
 Disallow: /secret/
 
-# Crawl-delay pour bots agressifs
+# Ralentir les bots agressifs
 User-agent: AhrefsBot
 Crawl-delay: 10
 
 User-agent: SemrushBot
 Crawl-delay: 15
-
-# Fin
